@@ -37,3 +37,17 @@ OOP :- Object oriented programming : - ANy real time entity which we convert int
 	   Github 
 	   
 	   Dev --- > UAT/SIT(testing )    --- > Productions
+	   
+	   Github :- 
+	   Clone :- git clone https://github.com/snehaljaiswal71/Java_Course.git
+	   cd Java_Course/
+	   git checkout -b feature/task_name       // using -b we can create own branch
+	   git status                    // we can check which file we need to  commit
+	   git add .                  // add the files  on server
+	   git commit -m "txt file"    // commit files -m "msg"
+	   git push               // merged to servers
+	   
+	   
+	   
+	   
+	   
