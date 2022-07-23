@@ -28,10 +28,12 @@ OOP :- Object oriented programming : - ANy real time entity which we convert int
 	   
 	   How we can achieve Abstration  by two ways interface and abscract class 
 	   
+	   abscract class :- we can use abscract methods and normal/concret method
+	   
 	   Suppose we needs to achieve 0 to 100 % absctractions then we should go with abstrct class
 	   or else we can use  interface.
 	   
-	   using interface we can achieve directly 100% abstractions
+	   using interface we can achieve directly 100% interface abstarctions
 	   
 	   
 	   Github 
@@ -49,5 +51,158 @@ OOP :- Object oriented programming : - ANy real time entity which we convert int
 	   
 	   
 	   
+	   Access Modifier
+	    :- Public , private , defaut  ,protected
+		
+		public whenvener method /  variable /  class  once u declare u can use anywhere
+		private :- we can access only inside that class 
+		default :- we can access within  the same package , if we haven`t metion any modifiers ,
+		it will take it as default
+		protected :- we can use within same package if we want to use in different using child class we can call 
+		it .
+		
+		Two types of keyword static and non static
+	
+	**** multiple inheriatnce is not supported is java
+	   example :- if both classes has same functianlity that time  object can get confusie
+	   
+	   
+	   
+	   
+	   Abstration   :- It hides internal complex data and shows the functinality to the users 
+	   
+	   How we can achieve Abstration  by two ways interface and abscract class 
+	   
+	   Suppose we needs to achieve 0 to 100 % absctractions then we should go with abstrct class
+	   or else we can use  interface.
+	   
+	   using interface we can achieve directly 100% abstractions
+	   
+	   
+	   Poly-morphism  :- Poly means many and morphism mean forms ,so we can acheive it ny many ways
+	   Overloading (compile time Poly-morphism )  / overriding (run time Poly-morphism )
+	   // by writing muliple methods we can achive it.
+	   
+	   
+	   //Loops
+	   for  , do while loop , while loop , forEach loop 
+	   
+	   Multi-threading 
+	   
+	   
+	   we can performed on funtioanlities , so that muliple threads can access those things
+	   
+	   How we can create Thread class
+	   1) extending Thread class
+	   2) Runnable Interface
+	   
+	   whenever we are creating thread it will look for run method and start the thread 
+	   
+	   can we start same thread twice 
+	   No, java.lang.IllegalThreadStateException exception will occured
+	   
+	   by using extending Thread class , we can not extends any another class , because multiple Inhreritace is not supported
+	   by implementing Runnable interface , we can extends any class and used it .
+	   
+	   synchronization
+	     multiple user cannot access those funtioanlities at the same time, they can access  it one by one .
+		 
+		 drawback 
+		    by using synchronization we can consume a lot of time , so we cannot use it .
+			
+			
+			
+			Airplane     5    3    5 thread    notify    seat are not availbe 
+			
+			
+			
+			
+			Exceptions    :-  checked , unchecked exception ,Error
+			
+			** Errors we cannot handle
+			
+			Why we need exception :- our programms should run in normal way even if at some point excetion or any error occured .
+			
+			checked , unchecked exception ,Error
+			
+			checked exception will always checked at compilation level
+			
+			unchecked exception will checked at runutime
+			
+			Error :- system generated , not programmaticlay so we can not handle it .  ex :- MemoryOutOfBound 
+			
+			keyword :- try , catch , finally , throw , throws
+			
+			User define exceptions 
+			
+			Try blocked we  can write/ put statements which can give an error  so , catch blocked it can excute normally .
+			
+			
+			Null pointer exceptions , Arthmatic exception , ArrayIndexOutofBound exception
+			
+			
+			50    we are doing some operation of 50 data      , 15 , 20 
+			
+			we cannot write try block alone , we need to write catch block or finlly block
+			
+			we can write multiple catch block , but parent Exception will come in the last , why beacuse it will handle all kind of exceptions
+			
+			finlly block will always gets excuted , when it will not , if der is any system failure .
+			
+			Throw : - to  throw an exceptions , we can used it to throw custom exception / user define exception
+			 and we can write it inside an method .
+			 
+			Throws :- we need to write with the method name  and In case of checked exception 
+           If child class throws an checcked exceptions parent class method must throws same exception or it`s  parent exception that will be (Exception) .			
+			
+	   
+	        
+			COLLECTIONS :- We can deal with large number of records / data that time we can use collections
+			
+			 Employees () ID name salray number  age  number
+			 
+			 Collections :- List ,Set , Queue
+			 
+			 List :- list supported by duplicate records /  data
+			         List supports insertion order 
+					 Null values also will add in the insertion order
+			      ArrayList :- arraylist to stored the elements
+
+                 by deafult arraylist contain the size of 10 				  
+				  
+				   LinkedList  :- LinkedList  to get the elements and menupulates them            
+
+				  Vector : - was introduced java 1.0 , 
+			 
+			 how we can removed duplicates from the list ..?
+			 
+			 Set :- Set supports only unioue records 
+			       set does not supports insertion order 
+				   Null value will always get the first position
+			     Hashset,,TreeSet
+			LinkedHashset :- it only supports insertion order 
+			
+			TreeSet  : - supports alphabatical Order
+			 Null values will not supports
+			
+			
+			   
+0		list.add("Employe2");  
+1		list.add("Employe3");
+2		list.add("Employe5");
+3		list.add("Employe4");
+4		list.add("Employe1");
+5		list.add("amnbd");
+        list.add("Employe2");
+6		                  list.add("Employe3");
+7		list.add("Employe5");
+8		list.add("Employe4");
+9		list.add("Employe1");
+10		list.add("Employe2");
+		list.add("Employe3");
+		list.add("Employe5");
+		list.add("Employe4");
+        
+		list.add(5, "abcd");
 	   
 	   
