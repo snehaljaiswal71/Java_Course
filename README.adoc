@@ -161,7 +161,7 @@ OOP :- Object oriented programming : - ANy real time entity which we convert int
 			
 			 Employees () ID name salray number  age  number
 			 
-			 Collections :- List ,Set , Queue
+			 Collections :- List ,Set ,  map   ignore  Queue
 			 
 			 List :- list supported by duplicate records /  data
 			         List supports insertion order 
@@ -184,7 +184,15 @@ OOP :- Object oriented programming : - ANy real time entity which we convert int
 			
 			TreeSet  : - supports alphabatical Order
 			 Null values will not supports
+			 
+			 can we add elements while iterating  :- No we will face concourrentmodificationexception
+			 to avoid it we will go with CopyOnwriteArrayList
+			 
 			
+			MAP works with key value pair
+			  Map<key,value>  keys    
+			  String s= "abc";
+			       keys.put(1,s.concate("abchd"));
 			
 			   
 0		list.add("Employe2");  
@@ -204,5 +212,127 @@ OOP :- Object oriented programming : - ANy real time entity which we convert int
 		list.add("Employe4");
         
 		list.add(5, "abcd");
+		
+		
+		
+		Map contains key value pair which sort it in basis of keys
+ Hashmap , LinkedHashMap , TreeMap , HashTable
+
+ map keys will always be unique , it will not allowed duplicates
+
+ to iterate over the elements we need to convert into set
+
+  one null key is alowed int map and values can be null
+
+   how internally map checks if keys are duplicates or internal working of hashmap
+   iternally we used Equals and Hashcode methods
+
+   Set / Map does not supports null / null as key we will get NullPointerException
+
+  If we face concurrentModificationException we can use CopyOnwriteArrayList / ConcurrentHashMap
+   
+
+  Vector/Hashtable is synchonized , mutiple thread / users cannot access those functionality at the same time
+
+
+ 
+Collections :- List , Set , Map
+   ArrayList/LinedList  , HashSet  , HashMap
+
+   WAR removed duplicates from List but not using Set
+
+   
+    java 8
+        :- Optional null
+        :- Lambda    
+         :- For loops
+         : - Predicate
+        :- Streams.filter
+        :- function Interface
+
+    Spring/SPringboot  mySQL/postmap
+
+   Servelt / Jsp / Jdbc
+
+  java 8
+
+  Lambda expression :- bioler plat means less code we need to write , whereever we have 1 abstract class der
+  we can Lambda expressions
+
+  Syntax -- (->)
+
+
+  stream().filter  will alwats work to collections
+
+
+
+ Spring  Core       /   Spring MVC  / Spring AOP / Security /  DAO / spring batch   :- springboot
+   
+  We don`t need to create the objects
+  while using spring we can achieve fully abstrations
+
+   Spring works on IOC / DI
+
+   Inversion of Control  -- container   :-  ApplicationCOntext , BeanFacotry
+   We don`t need to create the objects  , it will create beans , inisiazize beans , dispose the beans
+   DI - Dependacy Injection
+   We dont need to create an object instead of that we will tell which bean is going to use by beans and class names
+   
+   how to access the variables
+   Getter/Setter :- Property   , optional fileds we can write
+   Contsructor :-   Contsructor arg   , manditory fields needs to write
+
+  spring scopes
+   singleton :- by default singleton , it will create only one object for whole application
+   prototype :-  it will create object each time we call it
+   sessions :-  it will create object per sessions
+   GlobalSessions :-  it will create object per global sessions
+
+
+
+     
+   SPring AOP
+
+   (Aspect Oriented Programming)
+      we can divide program logic into small parts , and we can insert it at any point   .. cross cutting concerns
+
+    before :- methods should get executed before our main method
+    After :- methods should get executed after our main method
+    Around :- methods should get executed before and after our main method
+
+ annotations  @Component on the class level  vs  !--  <bean id="logAspect" class="c in xml file
+
+  AOP we are using for logging Purpose
+ 
+
+    we will used logging level in whole applications we can used it .
+   
+    MVC   :- Spring MVC   (Model View Controller)
+
+     COntroller that handles both Model and view
+    Model -- Bussiness logics which we need to write
+    View  -- we want it to display to customers
+
+Employee
+    Controller class that contains @Controller
+
+     GET   :- get the data based on Ids
+     POST :-  TO add some data
+     Delete :- delete the data  ids
+     Put  :- update the data ids
+   
+     Model :-  Bussiness logic @Service
+
+     call will come to this @RequestMapping  
+
+
+    How the MVC Flows works
+: - dispatcherServlet  --- > Controllers  --- > ( RequestMapping )Model data takes bussiness logics  --- > view to display it
+
+   @Component :- is fpor the bean
+   @Autowire to use it inside the class
+   
+Employee Name add , phone +91 sjhbvjhsdvb 6561651
+
 	   
 	   
