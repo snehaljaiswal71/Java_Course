@@ -332,7 +332,25 @@ Employee
    @Component :- is fpor the bean
    @Autowire to use it inside the class
    
-Employee Name add , phone +91 sjhbvjhsdvb 6561651
+Employee Name add , phone +91 sjhbvjhsdvb 6561651 
+
+ SpringBoot Employee CRUD Exampe     (Insurance bike car home                        , Bank , Retailor) 
+   C - Create (POST ) - R - retrive (Get)   U - (Put) update - D - delete (Delete)
+   
+                          create datable ,  table                           hibernate  --- HQL 
+	   hibernate     //   insert into table ta      selecte           Oracle   , mysql    , Mariadb , mongodb
+	   
+	   
+	   URL :- localhost:8080/api/v1/employees
+	   
+	   Sample Request 
+	   Post :- 
+	  
+	  {
+    "firstName": "CCC",
+    "lastName": "CCC",
+    "emailId": "ABABtest"
+}
 
 	   
 	   
