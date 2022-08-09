@@ -1,0 +1,5 @@
+com\onlinetutorialspoint\spring\boot\LoginController.class
+com\onlinetutorialspoint\spring\boot\UserValidator.class
+com\onlinetutorialspoint\spring\boot\LoggingAspect.class
+com\onlinetutorialspoint\spring\boot\Application.class
+com\onlinetutorialspoint\bean\LoginBean.class

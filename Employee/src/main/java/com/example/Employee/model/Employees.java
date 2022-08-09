@@ -22,6 +22,9 @@ public class Employees {
 	@Column(name = "LastName")
 	private String LastName;
 	
+	@Column(name = "phonenumber")
+	private String phoneNumber;
+	
 	@Column(name = "emailId")
 	//@OneToOne(mappedBy = "LastName")
 	private String emailId;
@@ -30,12 +33,21 @@ public class Employees {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Employees(long id, String firstName, String lastName, String emailId) {
+	public Employees(long id, String firstName, String lastName, String emailId,String phoneNumber) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
 		LastName = lastName;
 		this.emailId = emailId;
+		this.phoneNumber=phoneNumber;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
 	}
 
 	public long getId() {

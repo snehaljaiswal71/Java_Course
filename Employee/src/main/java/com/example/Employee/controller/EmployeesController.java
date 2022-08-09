@@ -22,6 +22,7 @@ import org.springframework.web.client.RestTemplate;
 
 import com.example.Employee.exception.EmployeeNotFoundExcepton;
 import com.example.Employee.model.Employees;
+import com.example.Employee.model.Test;
 import com.example.Employee.repository.EmployeeRepository;
 import com.example.Employee.validation.EmployeesValidation;
 
@@ -40,8 +41,12 @@ public class EmployeesController {
 	public Employees createEmployes(@RequestBody Employees employees) throws Exception {
 		valid.employeesCheck(employees);
 		RestTemplate restTemplate =new RestTemplate();
-		restTemplate.postForEntity("http://localhost:8056/api/v2/employees", employees, String.class);
-		return employeeRepository.save(employees);
+	 ResponseEntity<String> check=  restTemplate.postForEntity("http://localhost:8056/api/v2/employees", employees, String.class);
+	  String valid =check.getBody();
+	  if(valid.equals("true")){
+		  return employeeRepository.save(employees);
+	  }
+	 return null;
 	}
 
 	@GetMapping("/getEmployees")   // to get all
