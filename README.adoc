@@ -277,7 +277,7 @@ Collections :- List , Set , Map
    We don`t need to create the objects  , it will create beans , inisiazize beans , dispose the beans
    DI - Dependacy Injection
    We dont need to create an object instead of that we will tell which bean is going to use by beans and class names
-   
+                                              bean name class name   // @Componenet
    how to access the variables
    Getter/Setter :- Property   , optional fileds we can write
    Contsructor :-   Contsructor arg   , manditory fields needs to write
@@ -352,5 +352,69 @@ Employee Name add , phone +91 sjhbvjhsdvb 6561651
     "emailId": "ABABtest"
 }
 
+SOAP  XML       // REST     -- JSON // xml
+
+  Rest methods 
+    :- Get , POst ,Put ,Delete     , Patch
+	
+	
+	Queries
+	show tables;
+	select * from employees;
+	select * from employees where id=4;
+	
+	
+	   Monolithic Applications           MIcro-Services 
 	   
+	   1 . If 1 service goes down
+	   Others  can also .
 	   
+	   2. deployploment process  is 
+	   slow
+	   
+	   3. Testing also it will take 
+	   time
+	   
+	   How do you communicate between 2 micro -serives 
+	     via RestTemplate we can communicate
+	   
+	   JSONObject json = new JSONObject(employee);
+	String xml = XML.toString(json);
+	System.out.println(xml);
+	
+	Outh 2
+	
+AWS Instance Creation :- 
+1 .Create Springboot Project (Hello World)
+2. Build Project using (mvn clean install) jar file will created
+3. Create Bucket in AWS
+4. while creating Bucket in Object Ownership (ACLs enable)
+5. untick block all public access
+6. click on create bucket 
+7. go inside of bucket and upload jar file of 2nd steps
+8. click on jar file on Actions button
+at down click on Make public using ACLs
+9. click on jar file inside copy Object URL and save it in notepad
+10. Go to EC2 INstance 
+11 .click on Launch INstacne 
+ checck Instance type should be t2.micro 
+12. create Key Pair (If u dont have) select .pem
+13.In Firewall (security groups) Allow All 
+14. Launch Instance
+15 . Once Instance Launch Go to Instances 
+16.Select Instance Click on Connect
+17. select Tab SSh Client
+18.Open GitBash (Go to location where Step 12 .pem file is)
+19. copy and paste in git bash like chmod 400 SJ-.pem  from ssh tab
+20. copy paste  example like ssh -i "SJ-.pem" ec2-user@ec2-3-140-240-99.us-east-2.compute.amazonaws.com
+21.type sudo -i and enter
+22. yum install java-1.8.0-openjdk
+23.wget copy and paste step 9 and enter
+24. type :- java -jar jar (jar file name)
+25.copy Public IPv4 DNS Url and add Url mention in RestControll class like below
+ec2-3-140-240-99.us-east-2.compute.amazonaws.com:8080/testing
+26.allow port 8080 in Security groups in Security Tab  Edit inbound rules click add  rule add port 8080
+27.hit URL mention like in 25 step
+
+
+	

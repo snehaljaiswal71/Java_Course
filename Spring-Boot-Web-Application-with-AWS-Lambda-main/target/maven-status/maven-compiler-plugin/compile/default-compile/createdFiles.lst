@@ -1,0 +1,4 @@
+com\appsdeveloperblog\aws\lambda\AWSLambdaDemoApplication.class
+com\appsdeveloperblog\aws\lambda\ServiceHandler.class
+com\appsdeveloperblog\aws\lambda\TestLambda.class
+com\appsdeveloperblog\aws\lambda\TestAWSLambda.class
